@@ -16,12 +16,12 @@ h1, h2, h3, nav a {
 h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin: 10vh 0;
+    margin: 5vh 0;
 }
 h2 {
     text-align: center;
     font-size: 2rem;
-    margin: 2vh 0;
+    margin: 5vh 0;
 }
 h3 /*Not used*/ {
     font-size: 1.5rem;
@@ -33,6 +33,9 @@ ul {
 a {
     text-decoration: underline;
     color: rgb(0, 119, 128);
+}
+a:hover {
+    text-decoration: underline;
 }
 header {
     padding: 5vh 5vw;

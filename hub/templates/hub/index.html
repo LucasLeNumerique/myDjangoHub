@@ -1,17 +1,35 @@
-{% comment %} {% load static %} {% endcomment %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'todolist/style.css' %}"> {% endcomment %}
-    <title>Django ToDoApp</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'hub/style.css' %}">
+    <title>Django Hub</title>
 </head>
 <body>
 
     <main>
         <h1> Welcome to my hub! </h1>
+
+        <section>
+            <a href="/polls">
+                <div class="app" id="polls">
+                    <h2> Survey </h2>
+                </div>
+            </a>
+            <a href="/todolist">
+                <div class="app" id="todolist">
+                    <h2> ToDo List </h2>
+                </div>
+            </a>
+            <a href="#">
+                <div class="app">
+                    <h2> Work in progress </h2>
+                </div>
+            </a>
+        </section>
     </main>
 
 </body>

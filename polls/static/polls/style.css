@@ -9,18 +9,18 @@ body {
     line-height: 1.5;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-h1, h2, h3, nav a {
+h1, h2, h3, a {
     text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin: 10vh 0;
+    margin: 5vh 0;
 }
 h2 {
     font-size: 2rem;
-    margin: 2vh 0;
+    margin: 5vh 0;
 }
 h3 /*Not used*/ {
     font-size: 1.5rem;
@@ -30,8 +30,10 @@ ul {
     list-style: none;
 }
 a {
-    text-decoration: underline;
     color: green;
+}
+a:hover {
+    text-decoration: underline;
 }
 header {
     padding: 5vh 5vw;
@@ -46,10 +48,17 @@ main {
 .poll__frame {
     text-align: center;
 }
+.poll__frame li {
+    margin: 2vh;
+}
+.poll__frame a {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 1.5rem;
+    background: rgb(199, 238, 199);
+}
 
-/* form {
-    text-align: center;
-} */
 input[type=submit] {
     display: block;
     width: 100%;
