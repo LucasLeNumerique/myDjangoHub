@@ -20,5 +20,6 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('todolist/', include('todolist.urls')),
 
+    path('', include('hub.urls')),
     path('admin/', admin.site.urls),
 ]
