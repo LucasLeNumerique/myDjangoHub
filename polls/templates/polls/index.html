@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+    <title>Django Poll</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/polls/">Home</a></li>
+                <li><a href="/todolist/">ToDo App</a></li>
+                <li><a href="#">Redirect 2</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1> Answer our survey! </h1>
+
+        <div class="poll__frame">
+            <h2> Question list </h2>
+            {% if latest_question_list %}
+                <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p> No polls are available. </p>
+            {% endif %}
+        </div>
+    </main>
+
+</body>
+</html>
+

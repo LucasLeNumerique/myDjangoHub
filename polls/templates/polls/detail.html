@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+    <title>Django Poll - Question</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/polls/">Home</a></li>
+                <li><a href="/todolist/">ToDo App</a></li>
+                <li><a href="#">Redirect 2</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>{{ question.question_text }}</h1>
+        
+        <form action="{% url 'polls:vote' question.id %}" method="post">
+        {% csrf_token %}
+            {% if error_message %} <p><strong>{{ error_message }}</strong></p> {% endif %}
+
+            {% for choice in question.choice_set.all %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label> <br/>
+            {% endfor %}
+
+            <input type="submit" value="Vote">
+        </form>
+
+        <div class="use-links">
+            <a href="/polls/">Go back home</a>
+        </div>
+    </main>
+
+</body>
+</html>
+
