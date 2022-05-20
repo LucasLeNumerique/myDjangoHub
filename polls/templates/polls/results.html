@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+    <title>Django Poll - Results</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/todolist/">ToDo App</a></li>
+                <li><a href="#">Redirect 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>{{ question.question_text }}</h1>
+
+        <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }}:
+            <br/>
+            <span class="vote-counter">{{ choice.votes }} vote{{ choice.votes|pluralize }}</span></li>
+        {% endfor %}
+        </ul>
+
+        <div class="use-links">
+            <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+            <br/>
+            <a href="/polls/">Go back home</a>
+        </div>
+    </main>
+
+</body>
+</html>
