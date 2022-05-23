@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'hub',
+    'chatbox',
+    'channels', # (for chatbox)
     'todolist',
     'polls',
     'django.contrib.admin',
@@ -71,6 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djangoLucas.wsgi.application'
+ASGI_APPLICATION = 'djangoLucas.asgi.application'
 
 
 # Database
