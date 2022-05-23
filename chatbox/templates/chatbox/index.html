@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'chatbox/style.css' %}">
-    <title>Django ChatBox</title>
+    <title>Django Chatbox</title>
 </head>
 <body>
     <header>
@@ -18,31 +18,42 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
 
-        <input id="roomInputText" type="text"> <br/>
-        <input id="roomInputBtn" type="button" value="Enter">
+        <input id="userInput" type="text"> <br/>
+        <input id="roomInput" type="text"> <br/>
+        <input id="joinSubmit" type="button" value="Join"> <br/>
 
-        <script>
-
-            let input = document.getElementById('roomInputText');
-            input.addEventListener("keypress", function(event) {
-                if (event.key === "Enter") {
-                    event.preventDefault();
-                    document.getElementById('roomInputBtn').click()
-                }
-            });
-
-            document.getElementById('roomInputBtn').onclick = function(event) {
-                let roomName = document.getElementById('roomInputText').value;
-                window.location.pathname = '/room/' + roomName + '/';
-            };
-
-        </script>
+        <a href="/chatbox">Main Hall</a>
 
     </main>
 
+    <script>
+
+        document.getElementById('userInput').focus();
+
+        document.getElementById('userInput').addEventListener('keypress', function(e) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('joinSubmit').click();
+            }
+        })
+        document.getElementById('roomInput').addEventListener('keypress', function(e) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('joinSubmit').click();
+            }
+        })
+
+        document.getElementById('joinSubmit').onclick = function(e) {
+            let roomName = document.getElementById('roomInput').value;
+            let userName = document.getElementById('userInput').value;
+
+            window.location.replace('room/' + roomName + '/?username=' + userName);
+        }
+
+    </script>
 </body>
 </html>
 
