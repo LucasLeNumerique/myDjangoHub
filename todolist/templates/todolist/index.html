@@ -14,7 +14,7 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/polls">Polls App</a></li>
-                <li><a href="/chatbox/">Chatbox</a></li>
+                <li><a href="/#">Redirect 3</a></li>
             </ul>
         </nav>
     </header>
@@ -39,8 +39,8 @@
                 <p>{{ task }}</p>
             {% endif %}
 
-            <a href="{% url 'task' task.id %}">Edit</a>
-            <a href="{% url 'del_task' task.id %}">Delete</a>
+            <a href="{% url 'todolist:task' task.id %}">Edit</a>
+            <a href="{% url 'todolist:del_task' task.id %}">Delete</a>
 
         </div>
         {% endfor %}

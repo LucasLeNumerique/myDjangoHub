@@ -9,7 +9,7 @@ body {
     line-height: 1.5;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-h1, h2, h3, nav a {
+h1, h2, h3, a {
     text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -19,7 +19,6 @@ h1 {
     margin: 5vh 0;
 }
 h2 {
-    text-align: center;
     font-size: 2rem;
     margin: 5vh 0;
 }
@@ -31,15 +30,14 @@ ul {
     list-style: none;
 }
 a {
-    text-decoration: underline;
-    color: rgb(0, 119, 128);
+    color: rgb(0, 77, 128);
 }
 a:hover {
     text-decoration: underline;
 }
 header {
     padding: 5vh 5vw;
-    background-image: linear-gradient(to bottom, rgb(241, 251, 255), rgb(204, 255, 255))
+    background-image: linear-gradient(to bottom, rgb(241, 248, 255), rgb(204, 226, 255))
 }
 main {
     padding: 0 10vw;
@@ -48,21 +46,27 @@ main {
 
 /* ------------------------- TODOLIST ------------------------------ */
 
-
+input {
+    margin: 1vh 0;
+    text-align: center;
+}
 input[type=text] {
     padding: 5px;
     width: 100%;
     font-size: 1.5rem;
-    border: 1px solid rgb(59, 110, 114);
+    border: 2px solid rgb(0, 83, 151);
     border-radius: 5px;
+}
+input[type=text]:focus {
+    outline: 0;
 }
 input[type=submit] {
     display: block;
     width: 100%;
     padding: 5px;
-    margin: 20px 0;
+    margin: 2vh 0;
     cursor: pointer;
-    background: rgb(57, 106, 112);
+    background: rgb(57, 85, 112);
     color: white;
     font-size: 1.5rem;
     border: none;
@@ -71,7 +75,7 @@ input[type=submit] {
     font-weight: bold;
 }
 input[type=submit]:hover {
-    background: rgb(39, 75, 75);
+    background: rgb(39, 59, 75);
     transition: 0.25s;
 }
 
@@ -79,7 +83,7 @@ input[type=submit]:hover {
     padding: 20px;
     margin: 2vh auto;
     text-align: center;
-    background:rgb(171, 247, 247)
+    background:rgb(171, 219, 247)
 }
 
 #cancel {
