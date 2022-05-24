@@ -30,14 +30,14 @@ ul {
     list-style: none;
 }
 a {
-    color: green;
+    color: rgb(0, 128, 49);
 }
 a:hover {
     text-decoration: underline;
 }
 header {
     padding: 5vh 5vw;
-    background-image: linear-gradient(to bottom, rgb(241, 255, 241), rgb(204, 255, 204))
+    background-image: linear-gradient(to bottom, rgb(241, 255, 244), rgb(204, 255, 211))
 }
 main {
     padding: 0 10vw;
@@ -56,7 +56,7 @@ main {
     padding: 10px 0;
     width: 100%;
     font-size: 1.5rem;
-    background: rgb(199, 238, 199);
+    background: rgb(199, 238, 214);
 }
 
 input[type=submit] {
@@ -64,7 +64,7 @@ input[type=submit] {
     width: 100%;
     padding: 5px;
     margin: 20px 0;
-    background: rgb(75, 146, 75);
+    background: rgb(75, 146, 87);
     color: white;
     border: none;
     border-radius: 5px;
@@ -73,7 +73,8 @@ input[type=submit] {
     font-weight: bold;
 }
 input[type=submit]:hover {
-    background: rgb(59, 114, 59);
+    cursor: pointer;
+    background: rgb(59, 114, 71);
     transition: 0.25s;
 }
 .vote-counter {

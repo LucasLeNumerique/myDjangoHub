@@ -13,8 +13,8 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/polls/">Polls App</a></li>
-                <li><a href="#">Redirect 2</a></li>
+                <li><a href="/polls">Polls App</a></li>
+                <li><a href="/#">Redirect 3</a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +30,7 @@
             <input type="submit" name="Confirm">
         </form>
         <div id="cancel">
-            <a href="{% url 'list' %}">Cancel</a>
+            <a href="{% url 'todolist:index' %}">Cancel</a>
         </div>
     </main>
 

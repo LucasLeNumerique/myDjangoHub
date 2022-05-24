@@ -13,8 +13,8 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/polls/">Polls App</a></li>
-                <li><a href="#">Redirect 2</a></li>
+                <li><a href="/polls">Polls App</a></li>
+                <li><a href="/#">Redirect 3</a></li>
             </ul>
         </nav>
     </header>
@@ -27,6 +27,9 @@
             {{ form }}
             <input type="submit" name="Update Task">
         </form>
+        <div id="cancel">
+            <a href="{% url 'todolist:index' %}">Cancel</a>
+        </div>
     </main>
 
 </body>
