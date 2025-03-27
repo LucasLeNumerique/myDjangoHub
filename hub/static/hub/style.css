@@ -15,7 +15,7 @@ h1, h2, h3, nav a {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 h1 {
-    text-align: center;
+    /* text-align: center; */
     font-size: 2.5rem;
     margin: 5vh 0;
     color: rgb(133, 63, 63);
@@ -35,6 +35,9 @@ ul {
 
 main {
     padding: 0 10vw;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1250px;
 }
 
 /* ----------------------- MENU ------------------------- */

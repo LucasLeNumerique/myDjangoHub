@@ -40,7 +40,10 @@ header {
     background-image: linear-gradient(to bottom, rgb(241, 255, 244), rgb(204, 255, 211))
 }
 main {
-    padding: 0 10vw;
+    padding: 0 1vw;
+    margin: 0 auto;
+    max-width: 750px;
+    width: 100%;
 }
 
 /* ------------------------- POLLS ------------------------------ */
